@@ -1,6 +1,6 @@
 # Pru #
 
-Frustrated by bloated, slow, and overly complicated XML and JSON writing libraries? Pru is the simplest thing that could possibly work--a small (less than 100 lines) collection of combinators that build up a `StringBuilder => Unit` (newtyped as `Action`). It has zero dependencies. Here's a simple example of its use:
+Frustrated by bloated, slow, and overly complicated XML and JSON writing libraries? Pru is the simplest thing that could possibly work--a small ([less than 100 lines](https://github.com/pchiusano/pru/blob/master/src/main/scala/Writer.scala)) collection of combinators that build up a `StringBuilder => Unit` (newtyped as `Action`). It has zero dependencies. Here's a simple example of its use:
 
 ``` Scala
 import pru.write.{JSON => J, XML => X, Writer => W}
@@ -31,16 +31,20 @@ By convention, functions starting with a capital letter are variadic (for instan
 
 #### Things this library does not do ####
 
-* _Pretty-printing:_ Everything goes on one line, with no extra spaces
+* _Pretty-printing:_ Everything goes on one line
 * _Produce XML or JSON documents that don't fit in memory:_ You are building up a function which updates a `StringBuilder`, so streaming a huge document is not recommended. Of course, you can use this library to produce individual chunks of a large stream.
 * _Automatic derivation of JSON serialization code:_ There is no typeclass magic whatsoever, just regular combinators, invoked explicitly. Nothing stops you from building up a collection of `implicit` `A => Action` values if you're so inclined.
 
 ## Where to get it ##
 
-Add the following to your `.sbt` file:
+Add the following to your sbt build:
 
 ``` Scala
 resolvers += "Bintray Repo" at "http://dl.bintray.com/pchiusano/maven"
 
 libraryDependencies += "pru" %% "pru" % "0.3"
 ```
+
+## Documentation ##
+
+Just [read the source](https://github.com/pchiusano/pru/blob/master/src/main/scala/Writer.scala). It's less than 100 lines. The type signatures and a REPL session should tell all you need to know!
