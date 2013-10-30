@@ -23,11 +23,9 @@ println(json2)
 
 This produces:
 
-```
-<foo><bar id="1" bar="2"/></foo>
-<foo><bar id="1" bar="2"/></foo><foo><bar id="1" bar="2"/></foo>
-[["uno", "dos", "tres"], ["uno", "dos", "tres"]]
-```
+    <foo><bar id="1" bar="2"/></foo>
+    <foo><bar id="1" bar="2"/></foo><foo><bar id="1" bar="2"/></foo>
+    [["uno", "dos", "tres"], ["uno", "dos", "tres"]]
 
 By convention, functions starting with a capital letter are variadic (for instance, `J.List` above), while function starting with a lowercase letter of the same name accept an ordinary `Seq` input.
 
