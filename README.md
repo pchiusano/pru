@@ -31,9 +31,9 @@ By convention, functions starting with a capital letter are variadic (for instan
 
 #### Things this library does not do ####
 
-* _Pretty-printing:_ Everything goes on one line
+* _Pretty-printing:_ Everything goes on one line.
 * _Produce XML or JSON documents that don't fit in memory:_ You are building up a function which updates a `StringBuilder`, so streaming a huge document is not recommended. Of course, you can use this library to produce individual chunks of a large stream.
-* _Automatic derivation of JSON serialization code:_ There is no typeclass magic whatsoever, just regular combinators, invoked explicitly. Nothing stops you from building up a collection of `implicit` `A => Action` values if you're so inclined.
+* _Implicit derivation of XML or JSON serialization code:_ There is no typeclass magic whatsoever, just regular combinators, invoked explicitly. Nothing stops you from building up a collection of `implicit` `A => Action` values if you're so inclined.
 
 ## Where to get it ##
 
