@@ -32,7 +32,7 @@ object Writer {
   }
   def Intersperse(a: Action)(as: Action*) = intersperse(a)(as)
   def Rep[A](t: A*)(f: Writer[A]): Action = rep(f)(t)
-  def Concat(as: TraversableOnce[Action]): Action = concat(as)
+  def Concat(as: Action*): Action = concat(as)
 }
 
 object XML {
