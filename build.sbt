@@ -4,9 +4,9 @@ name := "pru"
 
 version := "0.3"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.0"
 
-crossScalaVersions := Seq(scalaVersion.value, "2.11.0-RC1")
+crossScalaVersions := Seq("2.11.0", "2.10.4")
 
 scalacOptions ++= {
   Seq("-encoding", "UTF-8", "-deprecation", "-unchecked",
@@ -19,7 +19,7 @@ scalacOptions ++= {
 
 libraryDependencies ++= {
   if (scalaVersion.value startsWith "2.10") Seq.empty
-  else Seq("org.scala-lang.modules" %% "scala-xml" % "1.0.0")
+  else Seq("org.scala-lang.modules" %% "scala-xml" % "1.0.1")
 }
 
 seq(bintraySettings:_*)
