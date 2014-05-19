@@ -42,8 +42,10 @@ Add the following to your sbt build:
 ``` Scala
 resolvers += "Bintray Repo" at "http://dl.bintray.com/pchiusano/maven"
 
-libraryDependencies += "pru" %% "pru" % "0.3"
+libraryDependencies += "pru" %% "pru" % "0.4"
 ```
+
+There are builds against Scala 2.10.3 and Scala 2.11.
 
 ## Documentation ##
 
